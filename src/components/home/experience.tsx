@@ -45,8 +45,8 @@ const others = [
 
 const Experience = () => {
   return (
-    <section id="experience" className="flex flex-col justify-content: start; text-center min-h-screen py-16">
-      <div>
+    <section id="experience" className="flex flex-col justify-content: start;min-h-screen py-16">
+      <div className=" text-center ">
         <p className="text-md">Experience</p>
         <h1 className="text-3xl tracking-widest mt-4 font-bold">经验</h1>
       </div>
@@ -93,7 +93,7 @@ const Experience = () => {
             </CardContent>
           </Card>
         </div>
-        <Card className="shadow-none ">
+        <Card className="shadow-none">
           <CardHeader>
             <CardTitle>其他技术</CardTitle>
           </CardHeader>
