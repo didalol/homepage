@@ -37,7 +37,7 @@ const menus = [
 const NotPcScreen = () => {
   return (
     <nav id="hamburger-nav" className="flex justify-between lg:hidden">
-      <div className="logo">He's PH</div>
+      <div className="logo">He&apos;s PH</div>
       <div className="flex items-center">
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
@@ -90,7 +90,7 @@ const PCScreen = () => {
       id="desktop-nav"
       className="flex justify-between my-4 text-xl max-lg:hidden">
       <div className="logo">
-        <a href="/">He's PH</a>
+        <a href="/">He&apos;s PH</a>
       </div>
       <div className="flex gap-1 items-center">
         <ul className="nav-links flex gap-4 items-center">
