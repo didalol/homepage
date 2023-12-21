@@ -71,7 +71,7 @@ const NotPcScreen = () => {
 const SwitchDarkMode = () => {
   const { setTheme } = useTheme();
   return (
-    <Button variant="link" size="icon">
+    <Button variant="link" size="icon" className="hvr-buzz-out">
       <SunIcon
         onClick={() => setTheme("dark")}
         className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0"
@@ -88,8 +88,8 @@ const PCScreen = () => {
   return (
     <nav
       id="desktop-nav"
-      className="flex justify-between my-4 text-xl max-lg:hidden">
-      <div className="logo hvr-buzz-out">
+      className="flex justify-between my-4  text-lg max-lg:hidden">
+      <div className="logo hvr-buzz">
         <a href="/">He&apos;s PH</a>
       </div>
       <div className="flex gap-1 items-center">
@@ -104,7 +104,7 @@ const PCScreen = () => {
             </li>
           ))}
         </ul>
-        <SwitchDarkMode />
+        <SwitchDarkMode  />
       </div>
     </nav>
   );

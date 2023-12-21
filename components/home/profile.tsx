@@ -45,7 +45,7 @@ const Profile = () => {
           全栈开发者（新时代农民工）
         </p>
         <div className="flex gap-4 justify-center">
-          <Button variant="secondary" onClick={() => openUrl("")}>
+          <Button variant="secondary" onClick={() => openUrl("")} className="hvr-buzz">
             个人简历
           </Button>
         </div>
@@ -53,7 +53,7 @@ const Profile = () => {
         <div className="flex gap-4 justify-center">
           <HoverCard>
             <HoverCardTrigger asChild>
-              <MailOutlined className="text-2xl cursor-pointer hover:scale-125" />
+              <MailOutlined className="text-2xl cursor-pointer hover:scale-125 hvr-buzz" />
             </HoverCardTrigger>
             <HoverCardContent className="w-48">
               <div className="flex gap-4 flex-col justify-center items-center">
@@ -65,7 +65,7 @@ const Profile = () => {
             <HoverCardTrigger asChild>
               <WechatFilled
                 onClick={() => openUrl("/assets/wechat.jpg")}
-                className="text-2xl cursor-pointer hover:scale-125"
+                className="text-2xl cursor-pointer hover:scale-125  hvr-buzz"
               />
             </HoverCardTrigger>
             <HoverCardContent className="w-48">
@@ -75,7 +75,7 @@ const Profile = () => {
             </HoverCardContent>
           </HoverCard>
           <GithubOutlined
-            className="text-2xl cursor-pointer hover:scale-125"
+            className="text-2xl cursor-pointer hover:scale-125 hvr-buzz"
             onClick={() => window.open("https://github.com/huala-fun")}
           />
         </div>

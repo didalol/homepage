@@ -75,4 +75,8 @@
   .hvr-underline-from-center:before {
     @apply bg-blue-400 h-[2px] underline-offset-4;
   }
+
+  .logo {
+    @apply px-2;
+  }
 }
