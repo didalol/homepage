@@ -37,7 +37,7 @@ const menus = [
 const NotPcScreen = () => {
   return (
     <nav id="hamburger-nav" className="flex justify-between lg:hidden">
-      <div className="logo">He&apos;s PH</div>
+      <div className="logo animate__animated animate__bounce">He&apos;s PH</div>
       <div className="flex items-center">
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
@@ -89,7 +89,7 @@ const PCScreen = () => {
     <nav
       id="desktop-nav"
       className="flex justify-between my-4 text-xl max-lg:hidden">
-      <div className="logo">
+      <div className="logo hvr-buzz-out">
         <a href="/">He&apos;s PH</a>
       </div>
       <div className="flex gap-1 items-center">
@@ -97,7 +97,7 @@ const PCScreen = () => {
           {menus.map((menu) => (
             <li
               key={menu.href}
-              className="hover:decoration-slate-500   text-md	 hover:underline hover:underline-offset-8">
+              className="hvr-underline-from-center  text-md	hover:underline hover:underline-offset-8">
               <a href={menu.href} target={menu?.target}>
                 {menu.title}
               </a>

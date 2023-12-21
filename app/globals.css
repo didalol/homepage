@@ -1,7 +1,8 @@
+@import url("hover.css");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -27,7 +28,7 @@
   }
 
   .dark {
-    --background: 240 10% 3.9%;
+    --background: #111;
     --foreground: 0 0% 98%;
     --card: 240 10% 3.9%;
     --card-foreground: 0 0% 98%;
@@ -50,11 +51,28 @@
 }
 
 @layer base {
-  .logo {
-    @apply cursor-pointer;
+  * {
+    user-select: none;
   }
 
-  *{
-    user-select: none;
+  /* 滚动槽 */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    border-radius: 3px;
+    background: rgba(0, 0, 0, 0.06);
+    -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.08);
+  }
+  /* 滚动条滑块 */
+  ::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+    background: rgba(0, 0, 0, 0.12);
+    -webkit-box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .hvr-underline-from-center:before {
+    @apply bg-blue-400 h-[2px] underline-offset-4;
   }
 }

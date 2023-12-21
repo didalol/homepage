@@ -46,7 +46,6 @@ const Profile = () => {
         </p>
         <div className="flex gap-4 justify-center">
           <Button variant="secondary" onClick={() => openUrl("")}>
-            {" "}
             个人简历
           </Button>
         </div>

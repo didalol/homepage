@@ -1,9 +1,7 @@
+import "./globals.css";
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
-import "./globals.css";
-import "@/styles/reset.css";
-import Background from "@/components/background";
 import { ScrollProgress } from "@/components/progress";
 
 const poppins = Poppins({
@@ -13,7 +11,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "He's Personal homepage",
+  title: "He's Personal Homepage",
   description: "个人主页",
 };
 
@@ -31,7 +29,6 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange>
           <main>{children}</main>
-          <Background />
           <ScrollProgress />
         </ThemeProvider>
       </body>
