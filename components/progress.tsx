@@ -26,7 +26,7 @@ export const ScrollProgress = () => {
   }, []);
   return progressPercentValue ? (
     <Progress
-      className="fixed top-0 z-[999999] rounded-none h-[2px] "
+      className="fixed top-0 z-[999999] rounded-none h-[2px]"
       value={progressPercentValue}></Progress>
   ) : (
     <></>

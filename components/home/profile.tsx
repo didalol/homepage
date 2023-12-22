@@ -1,24 +1,11 @@
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import {
-  QqOutlined,
   GithubOutlined,
   WechatFilled,
   MailOutlined,
 } from "@ant-design/icons";
-import HoverPopover from "../ui/hover-popover";
-import {
-  HoverCard,
-  HoverCardContent,
-  HoverCardTrigger,
-} from "@/components/ui/hover-card";
-
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from "@/components/ui/tooltip";
+import { Popover } from "../popover";
 
 const Profile = () => {
   const openUrl = (url: string) => {
@@ -45,35 +32,37 @@ const Profile = () => {
           全栈开发者（新时代农民工）
         </p>
         <div className="flex gap-4 justify-center">
-          <Button variant="secondary" onClick={() => openUrl("")} className="hvr-buzz">
+          <Button
+            variant="secondary"
+            onClick={() => openUrl("")}
+            className="hvr-buzz">
             个人简历
           </Button>
         </div>
+
         {/* 社交链接 */}
         <div className="flex gap-4 justify-center">
-          <HoverCard>
-            <HoverCardTrigger asChild>
+          <Popover
+            hoverEnabled={true}
+            trigger={
               <MailOutlined className="text-2xl cursor-pointer hover:scale-125 hvr-buzz" />
-            </HoverCardTrigger>
-            <HoverCardContent className="w-48">
-              <div className="flex gap-4 flex-col justify-center items-center">
-                <p className="text-sm">he.wenyao@foxmail.com</p>
-              </div>
-            </HoverCardContent>
-          </HoverCard>
-          <HoverCard>
-            <HoverCardTrigger asChild>
+            }>
+            <div className="flex gap-4 flex-col justify-center items-center">
+              <p className="text-sm">he.wenyao@foxmail.com</p>
+            </div>
+          </Popover>
+          <Popover
+            hoverEnabled={true}
+            trigger={
               <WechatFilled
                 onClick={() => openUrl("/assets/wechat.jpg")}
                 className="text-2xl cursor-pointer hover:scale-125  hvr-buzz"
               />
-            </HoverCardTrigger>
-            <HoverCardContent className="w-48">
-              <div className="flex gap-4 flex-col justify-center items-center">
-                <p className="text-sm">微信号:he-wen-yao</p>
-              </div>
-            </HoverCardContent>
-          </HoverCard>
+            }>
+            <div className="flex gap-4 flex-col justify-center items-center">
+              <p className="text-sm">微信号:he-wen-yao</p>
+            </div>
+          </Popover>
           <GithubOutlined
             className="text-2xl cursor-pointer hover:scale-125 hvr-buzz"
             onClick={() => window.open("https://github.com/huala-fun")}

@@ -14,7 +14,7 @@ import { EnterIcon } from "@radix-ui/react-icons";
 const projects = [
   {
     cover: "/assets/moyu.png",
-    name: "聚合热搜",
+    name: "热榜聚合",
     link: "https://moyu.huala.fun/",
     codePath: null,
     description: <>聚合常见网站的热搜</>,
@@ -33,13 +33,6 @@ const projects = [
     codePath: "https://github.com/hualafun/it-tools",
     description: <>众多实用的的工具箱，全在这里，永久免费使用</>,
   },
-  // {
-  //   cover: "/assets/project-forum.png",
-  //   name: "哗啦论坛",
-  //   link: "https://forum.huala.fun/",
-  //   codePath: "https://github.com/didalol/next-forum",
-  //   description: <>基于 Next.js 的哗啦论坛</>,
-  // },
 ];
 
 const Projects = () => {
@@ -54,7 +47,7 @@ const Projects = () => {
       <div className="mt-8 grid grid-cols-3 gap-4 justify-center max-lg:grid-cols-1">
         {projects.map((item) => {
           return (
-            <Card key={item.name} className="w-full max-lg:w-full shadow-none">
+            <Card key={item.name} className="w-full max-lg:w-full hvr-shadow cursor-pointer">
               <CardContent className="p-0">
                 <div className="flex justify-center items-center w-full flex-col text-center">
                   <Image
@@ -66,7 +59,7 @@ const Projects = () => {
                   />
                   <div className="flex flex-col gap-2">
                     <span className="text-2xl mt-4">{item.name}</span>
-                    <p className="text-inherit text-sm">{item.description}</p>
+                    <p className=" text-sm text-gray-400">{item.description}</p>
                   </div>
                 </div>
               </CardContent>

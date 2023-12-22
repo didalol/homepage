@@ -96,6 +96,7 @@ const Experience = () => {
         <Card className="shadow-none">
           <CardHeader>
             <CardTitle>其他技术</CardTitle>
+            <CardDescription>Others</CardDescription>
           </CardHeader>
           <CardContent>
             <div className="flex flex-wrap gap-2">
