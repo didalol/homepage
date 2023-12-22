@@ -4,6 +4,7 @@ import { Poppins } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
 import { ScrollProgress } from "@/components/progress";
 import { Analytics } from "@vercel/analytics/react";
+import { cn } from "@/lib/utils";
 
 const poppins = Poppins({
   weight: ["300", "400", "500", "600"],
@@ -23,7 +24,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="zh">
-      <body className={poppins.className}>
+      <body className={cn(poppins.className)}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

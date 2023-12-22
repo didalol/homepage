@@ -20,7 +20,6 @@ export const ScrollProgress = () => {
   useEffect(() => {
     setProgressPercentValue(progressPercent());
     window.onscroll = () => {
-      console.log(progressPercent());
       setProgressPercentValue(progressPercent());
     };
   }, []);

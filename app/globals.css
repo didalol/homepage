@@ -53,6 +53,7 @@
 @layer base {
   * {
     user-select: none;
+    @apply transition-colors duration-1000;
   }
 
   /* 滚动槽 */
@@ -79,20 +80,4 @@
   .logo {
     @apply px-2;
   }
-
-  /* 在你的 CSS 文件中定义一个自定义动画 */
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-
-  /* 使用 Tailwind 动画实用工具来应用动画 */
-  .dark {
-    animation: fadeIn 1s ease-in-out;
-  }
-
 }
