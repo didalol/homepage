@@ -1,0 +1,21 @@
+import { cn } from "../lib/utils";
+import Image from "next/image";
+
+## 简介
+
+我是一名热爱技术的全栈开发工程师，拥有丰富的开发经验和技能。我熟悉多种编程语言，包括 **Java、Go、Python 和 JavaScript**，能够在前端和后端开发中游刃有余。我注重代码质量和系统性能优化，善于解决问题并持续学习新技术，以保持竞争力。 通过全面的技术能力和团队合作精神，我致力于为客户提供创新的解决方案，推动项目的成功实现，并不断追求个人的成长和技术进步。
+
+export default ({ children, className }) => {
+  return (
+    <div className=" flex justify-between  items-center">
+      <div className={cn("prose", className)}>{children}</div>{" "}
+      <Image
+        className=" h-40 w-40  max-lg:hidden"
+        alt=""
+        width={320}
+        height={320}
+        src={"/easlo-laptop.svg"}
+      />
+    </div>
+  );
+};
