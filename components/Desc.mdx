@@ -8,7 +8,7 @@ import Image from "next/image";
 export default ({ children, className }) => {
   return (
     <div className=" flex justify-between  items-center">
-      <div className={cn("prose", className)}>{children}</div>{" "}
+      <div className={cn( className)}>{children}</div>{" "}
       <Image
         className=" h-40 w-40  max-lg:hidden"
         alt=""
