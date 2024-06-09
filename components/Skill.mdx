@@ -1,0 +1,27 @@
+import { cn } from "../lib/utils";
+import Image from "next/image";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+
+## 技能
+
+export default ({ children, className }) => {
+  return (
+    <>
+      <div className={cn(className)}>{children}</div>{" "}
+      <Tabs defaultValue="experience" className="w-[400px]">
+        <TabsList>
+          <TabsTrigger value="experience">经验</TabsTrigger>
+          <TabsTrigger value="language">语言</TabsTrigger>
+        </TabsList>
+        <TabsContent value="experience">
+          软件开发
+          <br />
+          数据库设计
+          <br />
+          前端开发
+        </TabsContent>
+        <TabsContent value="language">java、python、php</TabsContent>
+      </Tabs>
+    </>
+  );
+};
